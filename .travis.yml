@@ -1,0 +1,6 @@
+language: node_js
+deploy:
+  provider: heroku
+  app: bobvince-discord
+  api_key:
+    secure: $HEROKU_AUTH_TOKEN

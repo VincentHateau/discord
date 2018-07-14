@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-
-var auth = require('./auth.json');
+var auth = require('./auth.js');
 
 bot.on('ready', function () {
   console.log("Je suis connecté !")
