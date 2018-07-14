@@ -10,6 +10,9 @@ bot.on('message', message => {
     if (message.content === 'ping') {
       message.reply('pong !')
     }
+    if (message.content === 'Botvince es-tu là ?') {
+      message.reply('Oui...')
+    }
   })
 
 bot.login(auth.token)
