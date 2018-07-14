@@ -4,9 +4,6 @@
     "description": "Bot de l'endroit planqué",
     "main": "bot.js",
     "author": "bobvince",
-    "scripts": {
-        "start": "node bot.js"
-    },
     "dependencies": {
         "discord.js": "^11.3.2"
     }
