@@ -1,18 +1,17 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client()
-var auth = require('./auth.js');
+const clientDiscord = new Discord.Client()
+const config = require('./config.js');
 
-bot.on('ready', function () {
-  console.log("Je suis connecté !")
+var channel
+
+clientDiscord.on('ready', function () {
+  console.log("Bot connecté")
+  channel = clientDiscord.channels.get(config.channelId)
+  envoiMessage(":dragon_face: Bonjour à tous :dragon_face:")
 })
 
-bot.on('message', message => {
-    if (message.content === 'ping') {
-      message.reply('pong !')
-    }
-    if (message.content === 'Botvince es-tu là ?') {
-      message.reply('Oui...')
-    }
-  })
+clientDiscord.login(config.token)
 
-bot.login(auth.token)
+function envoiMessage(message){
+  channel.send(message)
+}
